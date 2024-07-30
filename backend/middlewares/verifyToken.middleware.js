@@ -5,7 +5,7 @@ module.exports.verifyToken = async (req, res, next) => {
       try {
             // Extract Authorization header and split into parts
             const authHeader = req.headers['authorization'];
-
+            console.log("Authheader"+authHeader)
             // Check if Authorization header exists and split into parts
             if (!authHeader || !authHeader.startsWith('Bearer ')) {
                   return res.status(403).json({
@@ -21,7 +21,8 @@ module.exports.verifyToken = async (req, res, next) => {
             // Verify token and extract payload
             const payload = jwt.verify(jwtToken, SECRET_KEY);
             req.user = payload.user; // Attach user information to the request object
-            console.log("RequestedUserID"+req.user.id)
+            console.log(req.user)
+            console.log("RequestedUserID" + req.user.id)
 
             // Proceed to the next middleware or route handler
             next();
