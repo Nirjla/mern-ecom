@@ -100,7 +100,7 @@ export const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                                                                                     
                                                                               </li>
                                                                               <li>
-                                                                              <SidebarLink name="add new product" to={"products/add-new-products"} className={'group relative flex items-center gap-2.5 rounded-md px-4 py-0 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white'} />
+                                                                              <SidebarLink name="add new product" to={"products/add-new-product"} className={'group relative flex items-center gap-2.5 rounded-md px-4 py-0 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white'} />
                                                                               </li>
                                                                               <li>
                                                                               <SidebarLink name="Categories" to={"products/categories"} className={'group relative flex items-center gap-2.5 rounded-md px-4 py-0 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white'} />

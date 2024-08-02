@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
+import { DropdownUser } from "./DropdownUser";
 
-export const Header = ({ sidebarOpen, setSidebarOpen }: { sidebarOpen: boolean, setSidebarOpen: (arg:boolean) => void }) => {
+export const Header = ({ sidebarOpen, setSidebarOpen }: { sidebarOpen: boolean, setSidebarOpen: (arg: boolean) => void }) => {
       return (<>
 
             <header className="sticky top-0 z-999 flex w-full bg-white drop-shadow-1 dark:bg-boxdark dark:drop-shadow-none">
@@ -46,6 +47,7 @@ export const Header = ({ sidebarOpen, setSidebarOpen }: { sidebarOpen: boolean, 
 
                               <Link className="block flex-shrink-0 lg:hidden" to="/">
                                     {/* <img src={LogoIcon} alt="Logo" /> */}
+                                    <h1 className="">Mern-Admin</h1>
                               </Link>
                         </div>
 
@@ -87,6 +89,7 @@ export const Header = ({ sidebarOpen, setSidebarOpen }: { sidebarOpen: boolean, 
 
                         <div className="flex items-center gap-3 2xsm:gap-7">
                               <ul className="flex items-center gap-2 2xsm:gap-4">
+                                    <DropdownUser />
                                     {/* <!-- Dark Mode Toggler --> */}
                               </ul>
                         </div>

@@ -4,11 +4,11 @@ const Product = new mongoose.Schema({
       name: { type: String, required: true },
       price: { type: Number, required: true },
       description: { type: String, required: true },
-      category: {
-            type: String, required: true
+      categoryId: {
+            type: mongoose.Schema.Types.ObjectId, ref: 'Category', required: true
       },
-      subcategory: {
-            type: String, required: true
+      subcategoryID: {
+            type: mongoose.Schema.Types.ObjectId, ref: 'Subcategory', required: true
       },
       image: {
             type: String, required: true
